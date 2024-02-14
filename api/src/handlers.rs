@@ -99,8 +99,6 @@ pub async fn user_details_handler(
 
     let db = database.lock().unwrap();
 
-    println!("{}, {}", user_details.username, user_details.password);
-
     if let Some(user) = db.get_user_by_username(&user_details.username) {
         if verify_password(&user.password, user_details.password.as_bytes()).is_ok() {
             return Json(Some(UserDetailsResponse {
