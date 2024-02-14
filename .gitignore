@@ -1,1 +1,5 @@
 token.txt
+api/target/
+api/Cargo.lock
+test-api/target/
+test-api/Cargo.lock
